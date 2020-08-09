@@ -39,10 +39,11 @@ input[type="text"]
 .AutoCompleteText ul{
     list-style-type: none;
     text-align:left;
-    width: 99.8%;
+    width: 96%;
+    float: right;
     border:0.3px solid lightgrey;
     font-size: 16px;
-    height: 180px;
+    height: auto;
     overflow-y: auto;
     border-radius: 3px;
     margin:0;
@@ -91,4 +92,5 @@ input[type="text"]
 
   .highlight{
       color:black;
+      background-color: yellowgreen;
   }

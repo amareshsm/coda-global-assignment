@@ -4,12 +4,31 @@ import '../styles/recipes.scss'
 import Playbtn from '../assets/ionic-ios-play-circle.png'
 import { HeartChecked } from "./heart";
 
-const Home = () => {
-  return (
+export default class Recipes extends React.Component {
+    constructor(props) {
+        super(props);
+    this.state = {
+       dataItems:[],
+       id:undefined
+      };
+    }
+
+    componentDidMount() {        
+        const data= localStorage.getItem('recipeData');
+        const id =this.props.match.params.id;
+       this.setState({dataItems:JSON.parse(data),id:id}) 
+      }
+
+      
+    render(){
+        const {dataItems,id} = this.state;     
+  return (     
+    <>
+    
     <div className="recipe-container">
       <div className="column1">
         <div className="item1">
-            <img  className="img-recipe"src={Img} height="160" width="80%"/>
+            <img  className="img-recipe"  src={Img} height="160" width="80%"/>
             <img src={Playbtn} className="playbtn" height="30" width="30"/>
         </div>
         <div className="item2">
@@ -44,13 +63,7 @@ const Home = () => {
             <p className="small-h">RECIPE</p>
             <h2>Cheese Brust</h2>
             <p className="small-h">DESCRIPTION</p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum</p>
+  <p>asdf</p>
         </div>
         <div className="item2">
                <div className="circle-values">
@@ -69,8 +82,9 @@ const Home = () => {
             <button>Add Comment</button>
         </div>
       </div>
-    </div>
+    </div> 
+    </>
   );
 };
 
-export default Home;
+}
