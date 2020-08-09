@@ -13,22 +13,24 @@ export default class Recipes extends React.Component {
       };
     }
 
-    componentDidMount() {        
-        const data= localStorage.getItem('recipeData');
-        const id =this.props.match.params.id;
-       this.setState({dataItems:JSON.parse(data),id:id}) 
+    componentWillMount() {   
+      const data= localStorage.getItem('recipeData');
+      const a=JSON.parse(data)        
+      const id =this.props.match.params.id;
+      console.log(a[id].image)
+     this.setState({dataItems:JSON.parse(data),id:id})
       }
-
+  
       
     render(){
-        const {dataItems,id} = this.state;     
+        const {dataItems,id} = this.state;   
+  
   return (     
-    <>
-    
+    <>    
     <div className="recipe-container">
       <div className="column1">
         <div className="item1">
-            <img  className="img-recipe"  src={Img} height="160" width="80%"/>
+            <img  className="img-recipe"  src={dataItems[id].image} height="160" width="80%"/>
             <img src={Playbtn} className="playbtn" height="30" width="30"/>
         </div>
         <div className="item2">
@@ -61,9 +63,9 @@ export default class Recipes extends React.Component {
       <div className="column2">
         <div className="item1">
             <p className="small-h">RECIPE</p>
-            <h2>Cheese Brust</h2>
+            <h2>{dataItems[id].name}</h2>
             <p className="small-h">DESCRIPTION</p>
-  <p>asdf</p>
+  <p>{dataItems[id].description}</p>
         </div>
         <div className="item2">
                <div className="circle-values">
