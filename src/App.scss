@@ -1,0 +1,31 @@
+.App {
+  padding: 10px;
+  .icon {
+    position: fixed;
+  }
+  .top {
+    top: -65px;
+    right: -10px;
+  }
+  .bottom {
+    bottom: -50px;
+    left: -35px;
+  }
+  .left {
+    left: 160px;
+    top: 40%
+  }
+  .right {
+    right: 0px;
+    top: 65%;
+  }
+  .right.small {
+    right: 160px;
+    top: 60%;
+  }
+ 
+}
+
+h1,h2,h3,h4,h5{
+  margin: 5px 0px;
+}
