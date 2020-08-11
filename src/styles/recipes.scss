@@ -1,6 +1,7 @@
 .recipe-container {
+
     display: flex;
-    margin: 0 auto;
+    margin: 30px auto;
     width: 70%;
 
     .column1 {
@@ -8,25 +9,22 @@
         margin: 15px;
         img {
             border-radius: 8px;
-            
         }
         p {
             color: #6e6e6e;
         }
 
-        .item1{
+        .item1 {
             position: relative;
 
-        
-             .playbtn{
-                 position:absolute;
-                 top:50%;
-                 left: 40%;
-                 z-index: 3;
-                 transform: translate(-50%,-50%);
-             }
+            .playbtn {
+                position: absolute;
+                top: 50%;
+                left: 40%;
+                z-index: 3;
+                transform: translate(-50%, -50%);
+            }
         }
-
     }
     .column2 {
         flex: 1 1 0px;
@@ -62,10 +60,10 @@
                 width: 90%;
                 margin: auto;
                 padding: 25px 0px 10px 0px;
-                span{
+                span {
                     font-weight: 600;
                 }
-               
+
                 * {
                     padding-left: 30px;
                 }
@@ -124,4 +122,40 @@
     .small-h {
         font-size: 12px;
     }
+}
+@media only screen and (max-width: 992px) {
+    .recipe-container {
+        flex-direction: column;
+        .column1{
+            .item1{
+                img:nth-child(1){
+                    width:100%;
+                }
+                .playbtn{
+                    left: 50%;
+              
+                }
+            }
+        }
+        .column2 {
+            .item2 {
+                .circle-values {
+                    .circle {
+                        margin: auto;
+                        height: 60px;
+                        width: 60px;
+                        margin-left: 10px;
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        background-color: black;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
 }
