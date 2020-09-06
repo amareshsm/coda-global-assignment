@@ -3,7 +3,7 @@
     display: flex;
     margin: 30px auto;
     width: 75%;
-    font-family: cursive;
+   
 
     .column1 {
         flex: 1 1 0px;
@@ -127,6 +127,7 @@
 @media only screen and (max-width: 992px) {
     .recipe-container {
         flex-direction: column;
+        width: 90%;
         .column1{
             .item1{
                 img:nth-child(1){
@@ -147,6 +148,7 @@
                         width: 60px;
                         margin-left: 10px;
                         display: flex;
+                        font-size: 11px;
                         align-items: center;
                         text-align: center;
                         justify-content: center;

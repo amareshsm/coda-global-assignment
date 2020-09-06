@@ -17,7 +17,6 @@ export default class Recipes extends React.Component {
       const data= localStorage.getItem('recipeData');
       const a=JSON.parse(data)        
       const id =this.props.match.params.id;
-      console.log(a[id].image)
      this.setState({dataItems:JSON.parse(data),id:id})
       }
   

@@ -4,7 +4,7 @@ import  {createUseStyles} from "react-jss";
 
 const useStyles = createUseStyles({
     imgSearch:{
-        width:'35px',
+        width:'38px',
         height:'35px',
         borderRadius:'50%',
         display:'flex',
@@ -19,7 +19,7 @@ const  Search=()=> {
     const classes = useStyles()
   return (
       <div className={classes.imgSearch}>
-      <img src={searchicon}  height="18" width="18"/>
+      <img src={searchicon} alt="search-icon"  height="17" width="17"/>
       </div>
   );
 }

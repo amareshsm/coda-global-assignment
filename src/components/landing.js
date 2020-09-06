@@ -96,7 +96,6 @@ export default class Landing extends React.Component {
 
   renderFoodRecipes(){
       const {recipeData,isLoading} = this.state;
-      console.log(recipeData);
 
        if(isLoading){
            return (<h2 className="loading">Loading</h2>)
@@ -107,7 +106,7 @@ export default class Landing extends React.Component {
       return (
         <section className="posts-cards-wrapper">
             {recipeData.map((item,id)=>(
-      <div className="posts-card-grid-space">
+      <div key={item.name+id} className="posts-card-grid-space">
       <div className="posts-card" >
           <div className="img-section" style={{'--bgImg': `url(${item.image})`}}>
           </div>
