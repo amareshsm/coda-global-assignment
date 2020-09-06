@@ -30,11 +30,11 @@ export default class Recipes extends React.Component {
     <div className="recipe-container">
       <div className="column1">
         <div className="item1">
-            <img  className="img-recipe"  src={dataItems[id].image} height="160" width="80%"/>
+            <img  className="img-recipe"  src={dataItems[id].image} height="170" width="85%"/>
             <img src={Playbtn} className="playbtn" height="30" width="30"/>
         </div>
         <div className="item2">
-          <h4>Ingredients</h4>
+          <h3>Ingredients</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -44,7 +44,7 @@ export default class Recipes extends React.Component {
           culpa qui officia deserunt mollit anim id est laborum</p>
         </div>
         <div className="item3">
-          <h4>How to prepare :</h4>
+          <h3>How to prepare :</h3>
           <h4>Ingredients</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

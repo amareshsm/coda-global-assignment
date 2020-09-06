@@ -8,7 +8,6 @@ import '../styles/cards.scss'
 export default class Landing extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       suggestions: [],
       inputText: "",
@@ -18,7 +17,6 @@ export default class Landing extends React.Component {
   
     };
   }
-
   componentDidMount() {
     this.fetchData();
   }
@@ -33,7 +31,6 @@ export default class Landing extends React.Component {
       this.setState({ error: "error occured while fetching data" });
     } finally {
       this.setState({ isLoading: false });
-
     }
   };
   onChange(e) {

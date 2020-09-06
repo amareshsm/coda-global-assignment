@@ -2,7 +2,8 @@
 
     display: flex;
     margin: 30px auto;
-    width: 70%;
+    width: 75%;
+    font-family: cursive;
 
     .column1 {
         flex: 1 1 0px;
@@ -76,8 +77,8 @@
 
                 .circle {
                     margin: auto;
-                    height: 84px;
-                    width: 84px;
+                    height: 90px;
+                    width: 90px;
                     margin-left: 10px;
                     display: flex;
                     align-items: center;
